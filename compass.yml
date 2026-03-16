@@ -1,0 +1,48 @@
+name: mobile-primary
+id: 'ari:cloud:compass:ab78e7b3-bd3c-4bb0-ade9-a74daaaa4482:component/968d8468-208e-476e-9019-85af8b89d050/d3d9edd6-b7df-40af-919e-20e140621df1'
+description: Serves all traffic to the mobile service.
+configVersion: 1
+typeId: SERVICE
+ownerId: 'ari:cloud:identity::team/3b9fcf0d-456c-4239-b2fb-3666b4cdd630'
+fields:
+  tier: 2
+  isMonorepoProject: false
+  lifecycle: Active
+links:
+  - name: Mobile Dev on-call schedule
+    type: ON_CALL
+    url: 'https://one-atlas-vokm.atlassian.net/compass/operations/3b9fcf0d-456c-4239-b2fb-3666b4cdd630/on-call'
+  - name: '#team_mobile-devs'
+    type: CHAT_CHANNEL
+    url: 'https://atlassianwcsddemo.slack.com/archives/C07MB077FJA'
+  - name: one-atlas-vokm/mobile-primary
+    type: REPOSITORY
+    url: 'https://bitbucket.org/one-atlas-vokm/mobile-primary/'
+  - name: Jira
+    type: PROJECT
+    url: 'https://one-atlas-vokm.atlassian.net/browse/MOBL'
+relationships:
+  DEPENDS_ON:
+    - 'ari:cloud:compass:ab78e7b3-bd3c-4bb0-ade9-a74daaaa4482:component/968d8468-208e-476e-9019-85af8b89d050/64e67ece-f1ff-4ab0-8d71-543aca639c8e'
+    - 'ari:cloud:compass:ab78e7b3-bd3c-4bb0-ade9-a74daaaa4482:component/968d8468-208e-476e-9019-85af8b89d050/e01a22db-e974-4547-8dc8-18a7fbe6ffd0'
+    - 'ari:cloud:compass:ab78e7b3-bd3c-4bb0-ade9-a74daaaa4482:component/968d8468-208e-476e-9019-85af8b89d050/683df946-ef68-4561-910b-e1f30094e394'
+labels:
+  - aws
+  - caddyserver
+  - frontend
+  - magnetic
+  - synced-with-jsm
+  - web
+customFields:
+  - name: Data encrypted at rest
+    type: text
+    value: n/a
+  - name: Data encrypted in transit
+    type: text
+    value: 'yes'
+  - name: Last security review
+    type: text
+    value: '2023-04-05'
+
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format
